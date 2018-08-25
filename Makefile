@@ -10,7 +10,7 @@ TARGET  := $(OBJ_DIR)/main
 APP_DIR := bin
 APP     := $(APP_DIR)/pert-vis
 
-LINT=clang-format
+LINT = clang-format
 
 .DEFAULT_GOAL := all
 
@@ -35,7 +35,7 @@ test: all lint-test
 	$(TESTS)
 
 lint:
-	clang-format -i $(SOURCES)
+	$(LINT) -i $(SOURCES)
 
 lint-test:
 	# TODO: Return non-zero if files are not linted
