@@ -10,6 +10,8 @@ TARGET  := $(OBJ_DIR)/main
 APP_DIR := bin
 APP     := $(APP_DIR)/pert-vis
 
+LINT=clang-format
+
 .DEFAULT_GOAL := all
 
 ## Build Targets
@@ -29,8 +31,14 @@ all: $(APP)
 ## Util Targets
 
 # TODO: Test this target
-test: all
+test: all lint-test
 	$(TESTS)
+
+lint:
+	clang-format -i $(SOURCES)
+
+lint-test:
+	# TODO: Return non-zero if files are not linted
 
 clean:
 	@rm -f $(OBJECTS)
