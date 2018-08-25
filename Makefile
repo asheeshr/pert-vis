@@ -15,6 +15,7 @@ APP     := $(APP_DIR)/pert-vis
 ## Build Targets
 
 $(OBJECTS) : $(SOURCES)
+	mkdir -p ${@D}
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 $(TARGET): $(OBJECTS)
