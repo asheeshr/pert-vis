@@ -1,4 +1,5 @@
-CFLAGS := --std=c11
+CFLAGS := --std=c11 -Wall -Wextra `pkg-config --cflags gtk+-3.0`
+LDFLAGS := `pkg-config --libs gtk+-3.0`
 
 OBJ_DIR := obj
 SOURCES := $(wildcard *.c) $(wildcard src/*.c) $(wildcard src/tests/*.c)
