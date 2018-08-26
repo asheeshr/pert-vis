@@ -1,3 +1,3 @@
 language: c
-install: ./install-dependencies.sh
+install: ./scripts/install-dependencies.sh
 script: make && make test
