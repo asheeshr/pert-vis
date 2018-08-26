@@ -1,3 +1,7 @@
 #!/bin/bash
 
-apt-get install libgtk-3-0
+# Build Deps
+sudo apt-get install -qq libgtk-3-0
+
+# Utils
+sudo apt-get install -qq clang-format
