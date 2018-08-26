@@ -2,3 +2,6 @@ language: c
 sudo: required
 install: ./scripts/install-dependencies.sh
 script: make && make test
+
+env:
+    - GTK3=yes

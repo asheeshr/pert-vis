@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get update -qq
+
 # Build Deps
 sudo apt-get install -qq libgtk-3-0 libgtk-3-dev
 
